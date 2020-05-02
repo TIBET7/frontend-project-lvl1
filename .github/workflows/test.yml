@@ -8,7 +8,7 @@ on:
   
   
 jobs:
-  test print:
+  test_print:
     runs-on: ubuntu-latest
    
    
