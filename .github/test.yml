@@ -1,0 +1,21 @@
+
+name: eslint-check
+
+
+on:
+  push:
+    branches: [ master ]
+  
+  
+jobs:
+  test print:
+    runs-on: ubuntu-latest
+   
+   
+    steps:
+    - name: Print Hellow Message
+      run: echo "Hello, world!"
+
+    
+  
+    
