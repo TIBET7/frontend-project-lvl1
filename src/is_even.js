@@ -27,37 +27,13 @@ export default () => {
         console.log('Correct!');
         console.log(`${'Congratulations, '}${userName}${'!'}`);
         return true;
-      }if (userAnswer === 'yes') {
-        console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was "no".'}`);
-        console.log(`${"Let's try again, "}${userName}${'!'}`);
-        return false;
-      } if (userAnswer === 'no') {
-        console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was "yes".'}`);
-        console.log(`${"Let's try again, "}${userName}${'!'}`);
-        return false;
-      } console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer.'}`);
+      }console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was '}${'"'}${isEven(randomNum)}${'"'}`);
       console.log(`${"Let's try again, "}${userName}${'!'}`);
       return false;
-    } if (userAnswer === 'yes') {
-      console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was "no".'}`);
-      console.log(`${"Let's try again, "}${userName}${'!'}`);
-      return false;
-    } if (userAnswer === 'no') {
-      console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was "yes".'}`);
-      console.log(`${"Let's try again, "}${userName}${'!'}`);
-      return false;
-    } console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer.'}`);
+    } console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was '}${'"'}${isEven(randomNum)}${'"'}`);
     console.log(`${"Let's try again, "}${userName}${'!'}`);
     return false;
-  } if (userAnswer === 'yes') {
-    console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was "no".'}`);
+  } console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was '}${'"'}${isEven(randomNum)}${'"'}`);
     console.log(`${"Let's try again, "}${userName}${'!'}`);
     return false;
-  } if (userAnswer === 'no') {
-    console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was "yes".'}`);
-    console.log(`${"Let's try again, "}${userName}${'!'}`);
-    return false;
-  } console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer.'}`);
-  console.log(`${"Let's try again, "}${userName}${'!'}`);
-  return false;
 };
