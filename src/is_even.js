@@ -29,13 +29,13 @@ export default () => {
         console.log('Correct!');
         console.log(`${'Congratulations, '}${userName}${'!'}`);
         return true;
-      } console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was '}${'"'}${isEven(randomNum)}${'"'}`);
+      } console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was '}${'"'}${isEven(randomNum)}${'".'}`);
       console.log(`${"Let's try again, "}${userName}${'!'}`);
       return false;
-    } console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was '}${'"'}${isEven(randomNum)}${'"'}`);
+    } console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was '}${'"'}${isEven(randomNum)}${'".'}`);
     console.log(`${"Let's try again, "}${userName}${'!'}`);
     return false;
-  } console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was '}${'"'}${isEven(randomNum)}${'"'}`);
+  } console.log(`${'"'}${userAnswer}${'"'}${' is wrong answer. Correct answer was '}${'"'}${isEven(randomNum)}${'".'}`);
   console.log(`${"Let's try again, "}${userName}${'!'}`);
   return false;
 };
