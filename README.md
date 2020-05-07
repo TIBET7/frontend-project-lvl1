@@ -5,6 +5,6 @@
 
 ![eslint-check](https://github.com/TIBET7/frontend-project-lvl1/workflows/eslint-check/badge.svg)
 
-## Asciinema of 'brain-even' game
+#### Asciinema of 'brain-even' game
 
 https://asciinema.org/a/qQ0lQs0N7tpLvBGH0FQ5SE7eh
