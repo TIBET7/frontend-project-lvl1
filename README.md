@@ -7,4 +7,4 @@
 
 #### Asciinema of 'brain-even' game
 
-https://asciinema.org/a/qQ0lQs0N7tpLvBGH0FQ5SE7eh
+https://asciinema.org/a/fbob3Ba85OrPZqzUJLHKNzRPA
