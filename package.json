@@ -23,7 +23,8 @@
     },
     "homepage": "https://github.com/TIBET7/frontend-project-lvl1#readme",
     "dependencies": {
-        "readline-sync": "^1.4.10"
+        "readline-sync": "^1.4.10",
+        "@hexlet/pairs": "^1.0.14"
     },
     "devDependencies": {
         "eslint": "^6.8.0",
