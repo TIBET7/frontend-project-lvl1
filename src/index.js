@@ -8,15 +8,15 @@ export const getGameData = (question, answer) => cons(question, answer);
 const getQuestion = (item) => car(item);
 const getCorrectAnswer = (item) => cdr(item);
 
-export const runGameEngine = (gameTask, updateGameData) => {
-  if (gameTask === false && updateGameData === false) return false;
+export const runGameEngine = (gameTask, gameData) => {
+  if (gameTask === false && gameData === false) return false;
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(`${gameTask}`);
   const getGameCore = (gameIter) => {
     if (gameIter === 3) return console.log(`Congratulations, ${userName}!`);
-    const data = updateGameData();
+    const data = gameData();
     const question = getQuestion(data);
     const correctAnswer = getCorrectAnswer(data);
     console.log(`Question: ${question}`);
