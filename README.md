@@ -12,3 +12,7 @@ https://asciinema.org/a/fbob3Ba85OrPZqzUJLHKNzRPA
 #### Asciinema of 'brain-calc' game
 
 https://asciinema.org/a/6TN2T3htCXaCA3RDDtXgw0b5B
+
+#### Asciinema of 'brain-gcd' game
+
+https://asciinema.org/a/L3HodSSdpAUsmgMxFGPgA980G
