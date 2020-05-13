@@ -8,15 +8,15 @@ const runGameAction = () => {
   const randomNumForOperator = Math.floor(Math.random() * 3);
   if (randomNumForOperator === 0) {
     const question = `${randomNum1} + ${randomNum2}`;
-    const answer = randomNum1 + randomNum2;
-    return getGameData(question, String(answer));
+    const correctAnswer = randomNum1 + randomNum2;
+    return getGameData(question, String(correctAnswer));
   } if (randomNumForOperator === 1) {
     const question = `${randomNum1} - ${randomNum2}`;
-    const answer = randomNum1 - randomNum2;
-    return getGameData(question, String(answer));
+    const correctAnswer = randomNum1 - randomNum2;
+    return getGameData(question, String(correctAnswer));
   } const question = `${randomNum1} * ${randomNum2}`;
-  const answer = randomNum1 * randomNum2;
-  return getGameData(question, String(answer));
+  const correctAnswer = randomNum1 * randomNum2;
+  return getGameData(question, String(correctAnswer));
 };
 
 const getCalcGame = () => runGameEngine(gameTask, runGameAction);

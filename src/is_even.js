@@ -11,8 +11,8 @@ const isEven = (num) => {
 const runGameAction = () => {
   const randomNum = Math.floor(Math.random() * 1000);
   const question = `${randomNum}   `;
-  const answer = isEven(randomNum);
-  return getGameData(question, String(answer));
+  const correctAnswer = isEven(randomNum);
+  return getGameData(question, correctAnswer);
 };
 
 const getIsEvenGame = () => runGameEngine(gameTask, runGameAction);

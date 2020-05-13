@@ -4,9 +4,9 @@ import pairs from '@hexlet/pairs';
 const { cons, car, cdr } = pairs;
 
 
-export const getGameData = (question, answer) => cons(question, answer);
-const getQuestion = (item) => car(item);
-const getCorrectAnswer = (item) => cdr(item);
+export const getGameData = (question, correctAnswer) => cons(question, correctAnswer);
+const getQuestion = (gameData) => car(gameData);
+const getCorrectAnswer = (gameData) => cdr(gameData);
 
 export const runGameEngine = (gameTask, gameData) => {
   if (gameTask === false && gameData === false) return false;

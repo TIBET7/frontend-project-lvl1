@@ -13,8 +13,8 @@ const runGameAction = () => {
   const randomNum1 = Math.floor(Math.random() * 100);
   const randomNum2 = Math.floor(Math.random() * 100);
   const question = `${randomNum1} ${randomNum2}`;
-  const answer = gcd(randomNum1, randomNum2);
-  return getGameData(question, String(answer));
+  const correctAnswer = gcd(randomNum1, randomNum2);
+  return getGameData(question, String(correctAnswer));
 };
 
 const getGcdGame = () => runGameEngine(gameTask, runGameAction);

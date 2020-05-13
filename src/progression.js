@@ -15,12 +15,12 @@ const runGameAction = () => {
   const randomNum2 = Math.floor(Math.random() * 20);
   const randomHiddenNum = Math.abs(Math.floor(Math.random() * 9));
   const randomProgression = getProgression(randomNum1, randomNum2);
-  const correctAnswer = randomProgression[randomHiddenNum];
+  const correctAuxiliaryAnswer = randomProgression[randomHiddenNum];
   randomProgression[randomHiddenNum] = '..';
   const questionProgression = randomProgression.join(' ');
   const question = `${questionProgression}`;
-  const answer = correctAnswer;
-  return getGameData(question, String(answer));
+  const correctAnswer = correctAuxiliaryAnswer;
+  return getGameData(question, String(correctAnswer));
 };
 
 const getProgressionGame = () => runGameEngine(gameTask, runGameAction);
