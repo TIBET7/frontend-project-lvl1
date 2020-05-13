@@ -9,7 +9,6 @@ const getQuestion = (gameData) => car(gameData);
 const getCorrectAnswer = (gameData) => cdr(gameData);
 
 export const runGameEngine = (gameTask, gameData) => {
-  if (gameTask === false && gameData === false) return false;
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);

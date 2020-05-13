@@ -5,18 +5,12 @@
 
 ![eslint-check](https://github.com/TIBET7/frontend-project-lvl1/workflows/eslint-check/badge.svg)
 
-#### Asciinema of 'brain-even' game
+<a href = "https://asciinema.org/a/fbob3Ba85OrPZqzUJLHKNzRPA">#### Asciinema of 'brain-even' game</a>
 
-https://asciinema.org/a/fbob3Ba85OrPZqzUJLHKNzRPA
+<a href = "https://asciinema.org/a/6TN2T3htCXaCA3RDDtXgw0b5B">#### Asciinema of 'brain-calc' game</a>
 
-#### Asciinema of 'brain-calc' game
+<a href = "https://asciinema.org/a/L3HodSSdpAUsmgMxFGPgA980G">#### Asciinema of 'brain-gcd' game</a>
 
-https://asciinema.org/a/6TN2T3htCXaCA3RDDtXgw0b5B
+<a href = "https://asciinema.org/a/TdX27DsqAhwwcJZhqAws92zLl">#### Asciinema of 'brain-progression' game</a>
 
-#### Asciinema of 'brain-gcd' game
-
-https://asciinema.org/a/L3HodSSdpAUsmgMxFGPgA980G
-
-#### Asciinema of 'brain-progression' game
-
-https://asciinema.org/a/TdX27DsqAhwwcJZhqAws92zLl
+<a href = "https://asciinema.org/a/pHZPogiwEECTjmIJUQIOCl7rt">#### Asciinema of 'brain-prime' game</a>
