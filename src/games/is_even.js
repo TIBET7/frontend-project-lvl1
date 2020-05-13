@@ -1,4 +1,4 @@
-import { getGameData, runGameEngine } from './index.js';
+import { getGameData, runGameEngine } from '../index.js';
 
 const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
 

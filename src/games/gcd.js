@@ -1,4 +1,4 @@
-import { getGameData, runGameEngine } from './index.js';
+import { getGameData, runGameEngine } from '../index.js';
 
 const gameTask = 'Find the greatest common divisor of given numbers.';
 

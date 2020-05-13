@@ -1,4 +1,4 @@
-import { getGameData, runGameEngine } from './index.js';
+import { getGameData, runGameEngine } from '../index.js';
 
 const gameTask = 'What number is missing in the progression?';
 
