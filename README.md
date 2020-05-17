@@ -1,5 +1,7 @@
 # frontend-project-lvl1
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+<a href="https://codeclimate.com/github/TIBET7/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/f58a88488d8957a6b4b4/maintainability" /></a>
+
+<a href="https://codeclimate.com/github/TIBET7/frontend-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/f58a88488d8957a6b4b4/test_coverage" /></a>
 
 ![eslint-check](https://github.com/TIBET7/frontend-project-lvl1/workflows/eslint-check/badge.svg)
 
