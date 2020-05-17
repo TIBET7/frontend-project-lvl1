@@ -3,31 +3,43 @@ import getRandomNumber from '../lib/getRandomNumber.js';
 
 const gameTask = 'What is the result of the expression?';
 
-const runGameAction = () => {
-  const randomNum1 = getRandomNumber(30);
-  const randomNum2 = getRandomNumber(30);
+const getRandomOperator = () => {
   let addition;
   let substraction;
   let multiplication;
+  let randomOperator;
   const operations = [addition, substraction, multiplication];
   const randomNumForOperator = getRandomNumber(operations.length);
-  let question;
-  let correctAnswer;
   switch (randomNumForOperator) {
     case 0:
-      question = `${randomNum1} + ${randomNum2}`;
-      correctAnswer = randomNum1 + randomNum2;
-      getGameData(question, String(correctAnswer));
+      randomOperator = '+';
       break;
     case 1:
-      question = `${randomNum1} - ${randomNum2}`;
-      correctAnswer = randomNum1 - randomNum2;
-      getGameData(question, String(correctAnswer));
+      randomOperator = '-';
       break;
     case 2:
-      question = `${randomNum1} * ${randomNum2}`;
+      randomOperator = '*';
+      break;
+    default:
+      break;
+  } return randomOperator;
+};
+
+const runGameAction = () => {
+  const randomNum1 = getRandomNumber(30);
+  const randomNum2 = getRandomNumber(30);
+  const randomOperator = getRandomOperator();
+  const question = `${randomNum1} ${randomOperator} ${randomNum2}`;
+  let correctAnswer;
+  switch (randomOperator) {
+    case '+':
+      correctAnswer = randomNum1 + randomNum2;
+      break;
+    case '-':
+      correctAnswer = randomNum1 - randomNum2;
+      break;
+    case '*':
       correctAnswer = randomNum1 * randomNum2;
-      getGameData(question, String(correctAnswer));
       break;
     default:
       break;
