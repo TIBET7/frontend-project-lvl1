@@ -1,20 +1,21 @@
 import { getGameData, runGameEngine } from '../index.js';
+import getRandomNumber from '../lib/getRandomNumber.js';
 
 const gameTask = 'What number is missing in the progression?';
 
-const getProgression = (num1, num2) => {
-  const result = [num1, num2];
-  const diff = num2 - num1;
-  for (let i = 1; i < 9; i += 1) {
-    result.push(result[i] + diff);
+const getProgression = (basicNum, progressionStep, progressionLength) => {
+  const result = [];
+  for (let i = 0; i < progressionLength; i += 1) {
+    result[i] = basicNum + i * progressionStep;
   } return result;
 };
 
 const runGameAction = () => {
-  const randomNum1 = Math.floor(Math.random() * 20);
-  const randomNum2 = Math.floor(Math.random() * 20);
-  const randomHiddenNum = Math.abs(Math.floor(Math.random() * 9));
-  const randomProgression = getProgression(randomNum1, randomNum2);
+  const progressionLength = 10;
+  const randomNum1 = getRandomNumber(20);
+  const randomprogressionStep = getRandomNumber(10);
+  const randomHiddenNum = getRandomNumber(progressionLength);
+  const randomProgression = getProgression(randomNum1, randomprogressionStep, progressionLength);
   const correctAuxiliaryAnswer = randomProgression[randomHiddenNum];
   randomProgression[randomHiddenNum] = '..';
   const questionProgression = randomProgression.join(' ');
