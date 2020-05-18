@@ -39,6 +39,6 @@ jobs:
     - name: Run linter
       # Run Linter
       run: |
-        make lint https://github.com/TIBET7/frontend-project-lvl1
+        make lint 
 
     
