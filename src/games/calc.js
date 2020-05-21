@@ -25,7 +25,7 @@ const getRandomOperator = () => {
   } return randomOperator;
 };
 
-const runGameAction = () => {
+const prepareGameData = () => {
   const randomNum1 = getRandomNumber(30);
   const randomNum2 = getRandomNumber(30);
   const randomOperator = getRandomOperator();
@@ -46,5 +46,5 @@ const runGameAction = () => {
   } return getGameData(question, String(correctAnswer));
 };
 
-const getCalcGame = () => runGameEngine(gameTask, runGameAction);
-export default getCalcGame;
+const runCalcGame = () => runGameEngine(gameTask, prepareGameData);
+export default runCalcGame;

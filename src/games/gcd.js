@@ -10,7 +10,7 @@ const gcd = (num1, num2) => {
   return gcd(num2, num1 % num2);
 };
 
-const runGameAction = () => {
+const prepareGameData = () => {
   const randomNum1 = getRandomNumber(100);
   const randomNum2 = getRandomNumber(100);
   const question = `${randomNum1} ${randomNum2}`;
@@ -18,5 +18,5 @@ const runGameAction = () => {
   return getGameData(question, String(correctAnswer));
 };
 
-const getGcdGame = () => runGameEngine(gameTask, runGameAction);
-export default getGcdGame;
+const runGcdGame = () => runGameEngine(gameTask, prepareGameData);
+export default runGcdGame;

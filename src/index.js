@@ -14,7 +14,8 @@ export const runGameEngine = (gameTask, gameData) => {
   console.log(`Hello, ${userName}!`);
   console.log(`${gameTask}`);
   const getGameCore = (gameIter) => {
-    if (gameIter === 3) return console.log(`Congratulations, ${userName}!`);
+    const maxGameIterations = 3;
+    if (gameIter === maxGameIterations) return console.log(`Congratulations, ${userName}!`);
     const data = gameData();
     const question = getQuestion(data);
     const correctAnswer = getCorrectAnswer(data);

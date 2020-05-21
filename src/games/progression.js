@@ -10,19 +10,19 @@ const getProgression = (basicNum, progressionStep, progressionLength) => {
   } return result;
 };
 
-const runGameAction = () => {
+const prepareGameData = () => {
   const progressionLength = 10;
   const randomNum1 = getRandomNumber(20);
-  const randomprogressionStep = getRandomNumber(10);
+  const randomProgressionStep = getRandomNumber(10);
   const randomHiddenNum = getRandomNumber(progressionLength);
-  const randomProgression = getProgression(randomNum1, randomprogressionStep, progressionLength);
-  const correctAuxiliaryAnswer = randomProgression[randomHiddenNum];
-  randomProgression[randomHiddenNum] = '..';
-  const questionProgression = randomProgression.join(' ');
-  const question = `${questionProgression}`;
+  const progression = getProgression(randomNum1, randomProgressionStep, progressionLength);
+  const correctAuxiliaryAnswer = progression[randomHiddenNum];
+  progression[randomHiddenNum] = '..';
+  const questionProgression = progression.join(' ');
+  const question = String(questionProgression);
   const correctAnswer = correctAuxiliaryAnswer;
   return getGameData(question, String(correctAnswer));
 };
 
-const getProgressionGame = () => runGameEngine(gameTask, runGameAction);
-export default getProgressionGame;
+const runProgressionGame = () => runGameEngine(gameTask, prepareGameData);
+export default runProgressionGame;

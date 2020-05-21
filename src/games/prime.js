@@ -14,12 +14,12 @@ const isPrime = (num) => {
   } return true;
 };
 
-const runGameAction = () => {
+const prepareGameData = () => {
   const randomNum = getRandomNumber(100);
-  const question = `${randomNum}   `;
+  const question = String(randomNum);
   const correctAnswer = isPrime(randomNum) ? 'yes' : 'no';
   return getGameData(question, correctAnswer);
 };
 
-const getIsPrimeGame = () => runGameEngine(gameTask, runGameAction);
-export default getIsPrimeGame;
+const runIsPrimeGame = () => runGameEngine(gameTask, prepareGameData);
+export default runIsPrimeGame;
