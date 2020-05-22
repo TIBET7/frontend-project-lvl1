@@ -1,4 +1,5 @@
-import { getGameData, runGameEngine } from '../index.js';
+import { getGameData } from '../lib/gameData.js';
+import runGameEngine from '../index.js';
 import getRandomNumber from '../lib/getRandomNumber.js';
 
 const gameTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';

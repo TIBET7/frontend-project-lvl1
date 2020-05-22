@@ -1,14 +1,7 @@
 import readlineSync from 'readline-sync';
-import pairs from '@hexlet/pairs';
+import { getQuestion, getCorrectAnswer } from './lib/gameData.js';
 
-const { cons, car, cdr } = pairs;
-
-
-export const getGameData = (question, correctAnswer) => cons(question, correctAnswer);
-const getQuestion = (gameData) => car(gameData);
-const getCorrectAnswer = (gameData) => cdr(gameData);
-
-export const runGameEngine = (gameTask, gameData) => {
+export default (gameTask, gameData) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
