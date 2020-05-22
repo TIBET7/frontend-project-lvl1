@@ -16,11 +16,9 @@ const prepareGameData = () => {
   const randomProgressionStep = getRandomNumber(1, 10);
   const randomHiddenNum = getRandomNumber(1, progressionLength);
   const progression = getProgression(randomNum1, randomProgressionStep, progressionLength);
-  const correctAuxiliaryAnswer = progression[randomHiddenNum];
+  const correctAnswer = progression[randomHiddenNum];
   progression[randomHiddenNum] = '..';
-  const questionProgression = progression.join(' ');
-  const question = String(questionProgression);
-  const correctAnswer = correctAuxiliaryAnswer;
+  const question = String(progression.join(' '));
   return getGameData(question, String(correctAnswer));
 };
 
