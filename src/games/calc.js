@@ -3,42 +3,27 @@ import getRandomNumber from '../lib/getRandomNumber.js';
 
 const gameTask = 'What is the result of the expression?';
 
-const getRandomOperator = () => {
+const prepareGameData = () => {
   let addition;
   let substraction;
   let multiplication;
-  let randomOperator;
   const operations = [addition, substraction, multiplication];
-  const randomNumForOperator = getRandomNumber(0, operations.length);
-  switch (randomNumForOperator) {
-    case 0:
-      randomOperator = '+';
-      break;
-    case 1:
-      randomOperator = '-';
-      break;
-    case 2:
-      randomOperator = '*';
-      break;
-    default:
-      break;
-  } return randomOperator;
-};
-
-const prepareGameData = () => {
   const randomNum1 = getRandomNumber(1, 30);
   const randomNum2 = getRandomNumber(1, 30);
-  const randomOperator = getRandomOperator();
-  const question = `${randomNum1} ${randomOperator} ${randomNum2}`;
+  const randomOperator = getRandomNumber(0, operations.length);
+  let question;
   let correctAnswer;
   switch (randomOperator) {
-    case '+':
+    case 0:
+      question = `${randomNum1} + ${randomNum2}`;
       correctAnswer = randomNum1 + randomNum2;
       break;
-    case '-':
+    case 1:
+      question = `${randomNum1} - ${randomNum2}`;
       correctAnswer = randomNum1 - randomNum2;
       break;
-    case '*':
+    case 2:
+      question = `${randomNum1} * ${randomNum2}`;
       correctAnswer = randomNum1 * randomNum2;
       break;
     default:
