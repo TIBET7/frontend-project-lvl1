@@ -12,9 +12,9 @@ const getProgression = (basicNum, progressionStep, progressionLength) => {
 
 const prepareGameData = () => {
   const progressionLength = 10;
-  const randomNum1 = getRandomNumber(20);
-  const randomProgressionStep = getRandomNumber(10);
-  const randomHiddenNum = getRandomNumber(progressionLength);
+  const randomNum1 = getRandomNumber(1, 20);
+  const randomProgressionStep = getRandomNumber(1, 10);
+  const randomHiddenNum = getRandomNumber(1, progressionLength);
   const progression = getProgression(randomNum1, randomProgressionStep, progressionLength);
   const correctAuxiliaryAnswer = progression[randomHiddenNum];
   progression[randomHiddenNum] = '..';

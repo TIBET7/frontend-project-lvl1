@@ -9,7 +9,7 @@ const getRandomOperator = () => {
   let multiplication;
   let randomOperator;
   const operations = [addition, substraction, multiplication];
-  const randomNumForOperator = getRandomNumber(operations.length);
+  const randomNumForOperator = getRandomNumber(0, operations.length);
   switch (randomNumForOperator) {
     case 0:
       randomOperator = '+';
@@ -26,8 +26,8 @@ const getRandomOperator = () => {
 };
 
 const prepareGameData = () => {
-  const randomNum1 = getRandomNumber(30);
-  const randomNum2 = getRandomNumber(30);
+  const randomNum1 = getRandomNumber(1, 30);
+  const randomNum2 = getRandomNumber(1, 30);
   const randomOperator = getRandomOperator();
   const question = `${randomNum1} ${randomOperator} ${randomNum2}`;
   let correctAnswer;

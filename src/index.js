@@ -24,6 +24,6 @@ export const runGameEngine = (gameTask, gameData) => {
     if (userAnswer === correctAnswer) {
       console.log('Correct !');
       return getGameCore(gameIter + 1);
-    } return console.log(`"${userAnswer}" is wrong answer. Correct answer was "${correctAnswer}". \nLet's try again, ${userName}!`);
+    } return console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}". \nLet's try again, ${userName}!`);
   }; return getGameCore(0);
 };
