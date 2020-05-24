@@ -4,10 +4,12 @@ import getRandomNumber from '../lib/getRandomNumber.js';
 
 const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+const isEven = (num) => (num % 2 === 0);
+
 const prepareGameData = () => {
   const randomNum = getRandomNumber(1, 1000);
   const question = String(randomNum);
-  const correctAnswer = randomNum % 2 === 0 ? 'yes' : 'no';
+  const correctAnswer = isEven(randomNum) ? 'yes' : 'no';
   return getGameData(question, correctAnswer);
 };
 
