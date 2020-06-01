@@ -1,17 +1,17 @@
 import readlineSync from 'readline-sync';
 import { getQuestion, getCorrectAnswer } from './lib/gameData.js';
 
-export default (gameTask, gameData) => {
+export default (gameTask, getGameData) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(`${gameTask}`);
   const getGameCore = (gameIter) => {
-    const maxGameIterations = 3;
-    if (gameIter === maxGameIterations) return console.log(`Congratulations, ${userName}!`);
-    const data = gameData();
-    const question = getQuestion(data);
-    const correctAnswer = getCorrectAnswer(data);
+    const maxGameIterationsCount = 3;
+    if (gameIter === maxGameIterationsCount) return console.log(`Congratulations, ${userName}!`);
+    const gameData = getGameData();
+    const question = getQuestion(gameData);
+    const correctAnswer = getCorrectAnswer(gameData);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {

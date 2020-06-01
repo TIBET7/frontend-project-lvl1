@@ -1,6 +1,6 @@
 import { getGameData } from '../lib/gameData.js';
-import runGameEngine from '../index.js';
-import getRandomNumber from '../lib/getRandomNumber.js';
+import runGame from '../index.js';
+import getRandomNum from '../lib/getRandomNum.js';
 
 const gameTask = 'What number is missing in the progression?';
 
@@ -13,15 +13,15 @@ const getProgression = (basicNum, progressionStep, progressionLength) => {
 
 const prepareGameData = () => {
   const progressionLength = 10;
-  const randomNum1 = getRandomNumber(1, 20);
-  const randomProgressionStep = getRandomNumber(1, 10);
-  const randomHiddenNum = getRandomNumber(1, progressionLength);
-  const progression = getProgression(randomNum1, randomProgressionStep, progressionLength);
-  const correctAnswer = progression[randomHiddenNum];
-  progression[randomHiddenNum] = '..';
+  const progressionFirstNum = getRandomNum(1, 20);
+  const randomProgressionStep = getRandomNum(1, 10);
+  const randomNumIndex = getRandomNum(1, progressionLength - 1);
+  const progression = getProgression(progressionFirstNum, randomProgressionStep, progressionLength);
+  const correctAnswer = progression[randomNumIndex];
+  progression[randomNumIndex] = '..';
   const question = String(progression.join(' '));
   return getGameData(question, String(correctAnswer));
 };
 
-const runProgressionGame = () => runGameEngine(gameTask, prepareGameData);
-export default runProgressionGame;
+const startGame = () => runGame(gameTask, prepareGameData);
+export default startGame;

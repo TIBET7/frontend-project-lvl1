@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import runGame from '../src/cli.js';
+import startAcquaintance from '../src/cli.js';
 
-runGame();
+startAcquaintance();

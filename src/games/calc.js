@@ -1,30 +1,25 @@
 import { getGameData } from '../lib/gameData.js';
-import runGameEngine from '../index.js';
-import getRandomNumber from '../lib/getRandomNumber.js';
+import runGame from '../index.js';
+import getRandomNum from '../lib/getRandomNum.js';
 
 const gameTask = 'What is the result of the expression?';
 
 const prepareGameData = () => {
-  let addition;
-  let substraction;
-  let multiplication;
-  const operations = [addition, substraction, multiplication];
-  const randomNum1 = getRandomNumber(1, 30);
-  const randomNum2 = getRandomNumber(1, 30);
-  const randomOperator = getRandomNumber(0, operations.length);
-  let question;
+  const operators = ['+', '-', '*'];
+  const randomNum1 = getRandomNum(1, 30);
+  const randomNum2 = getRandomNum(1, 30);
+  const randomOperatorIndex = getRandomNum(0, operators.length - 1);
+  const randomOperator = operators[randomOperatorIndex];
+  const question = `${randomNum1} ${randomOperator} ${randomNum2}`;
   let correctAnswer;
   switch (randomOperator) {
-    case 0:
-      question = `${randomNum1} + ${randomNum2}`;
+    case '+':
       correctAnswer = randomNum1 + randomNum2;
       break;
-    case 1:
-      question = `${randomNum1} - ${randomNum2}`;
+    case '-':
       correctAnswer = randomNum1 - randomNum2;
       break;
-    case 2:
-      question = `${randomNum1} * ${randomNum2}`;
+    case '*':
       correctAnswer = randomNum1 * randomNum2;
       break;
     default:
@@ -32,5 +27,5 @@ const prepareGameData = () => {
   } return getGameData(question, String(correctAnswer));
 };
 
-const runCalcGame = () => runGameEngine(gameTask, prepareGameData);
-export default runCalcGame;
+const startGame = () => runGame(gameTask, prepareGameData);
+export default startGame;
