@@ -14,11 +14,11 @@
 
 <a href = "https://asciinema.org/a/6TN2T3htCXaCA3RDDtXgw0b5B">Игра: "Калькулятор"</a>
 
-<a href = "https://asciinema.org/a/L3HodSSdpAUsmgMxFGPgA980G">Игра "Наибольший общий делитель"</a>
+<a href = "https://asciinema.org/a/L3HodSSdpAUsmgMxFGPgA980G">Игра: "Наибольший общий делитель"</a>
 
-<a href = "https://asciinema.org/a/TdX27DsqAhwwcJZhqAws92zLl">Игра "Арифметическая прогрессия"</a>
+<a href = "https://asciinema.org/a/TdX27DsqAhwwcJZhqAws92zLl">Игра: "Арифметическая прогрессия"</a>
 
-<a href = "https://asciinema.org/a/pHZPogiwEECTjmIJUQIOCl7rt">Игра "Простое ли число?"</a>
+<a href = "https://asciinema.org/a/pHZPogiwEECTjmIJUQIOCl7rt">Игра: "Простое ли число?"</a>
 
 #### Установка:
 
