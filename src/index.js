@@ -6,7 +6,7 @@ export default (gameTask, getGameData) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(`${gameTask}`);
-  const getGameCore = (gameIter) => {
+  const runGameIter = (gameIter) => {
     const maxGameIterationsCount = 3;
     if (gameIter === maxGameIterationsCount) return console.log(`Congratulations, ${userName}!`);
     const gameData = getGameData();
@@ -16,7 +16,7 @@ export default (gameTask, getGameData) => {
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {
       console.log('Correct !');
-      return getGameCore(gameIter + 1);
+      return runGameIter(gameIter + 1);
     } return console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}". \nLet's try again, ${userName}!`);
-  }; return getGameCore(0);
+  }; return runGameIter(0);
 };
