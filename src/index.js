@@ -8,7 +8,10 @@ export default (gameTask, getGameData) => {
   console.log(`${gameTask}`);
   const runGameIter = (gameIter) => {
     const maxGameIterationsCount = 3;
-    if (gameIter === maxGameIterationsCount) return console.log(`Congratulations, ${userName}!`);
+    if (gameIter === maxGameIterationsCount) {
+      console.log(`Congratulations, ${userName}!`);
+      return;
+    }
     const gameData = getGameData();
     const question = getQuestion(gameData);
     const correctAnswer = getCorrectAnswer(gameData);
@@ -16,7 +19,8 @@ export default (gameTask, getGameData) => {
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {
       console.log('Correct !');
-      return runGameIter(gameIter + 1);
-    } return console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}". \nLet's try again, ${userName}!`);
-  }; return runGameIter(0);
+      runGameIter(gameIter + 1);
+      return;
+    } console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}". \nLet's try again, ${userName}!`);
+  }; runGameIter(0);
 };
