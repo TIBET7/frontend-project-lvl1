@@ -1,4 +1,4 @@
-import { getGameData } from '../lib/gameData.js';
+import { makeGameData } from '../lib/gameData.js';
 import runGame from '../index.js';
 import getRandomNum from '../lib/getRandomNum.js';
 
@@ -20,7 +20,7 @@ const prepareGameData = () => {
   const correctAnswer = progression[randomNumIndex];
   progression[randomNumIndex] = '..';
   const question = String(progression.join(' '));
-  return getGameData(question, String(correctAnswer));
+  return makeGameData(question, String(correctAnswer));
 };
 
 const startGame = () => runGame(gameTask, prepareGameData);

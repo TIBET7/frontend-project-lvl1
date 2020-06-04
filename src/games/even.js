@@ -1,4 +1,4 @@
-import { getGameData } from '../lib/gameData.js';
+import { makeGameData } from '../lib/gameData.js';
 import runGame from '../index.js';
 import getRandomNum from '../lib/getRandomNum.js';
 
@@ -10,7 +10,7 @@ const prepareGameData = () => {
   const randomNum = getRandomNum(1, 1000);
   const question = String(randomNum);
   const correctAnswer = isEven(randomNum) ? 'yes' : 'no';
-  return getGameData(question, correctAnswer);
+  return makeGameData(question, correctAnswer);
 };
 
 const startGame = () => runGame(gameTask, prepareGameData);

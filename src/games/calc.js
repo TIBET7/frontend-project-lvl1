@@ -1,4 +1,4 @@
-import { getGameData } from '../lib/gameData.js';
+import { makeGameData } from '../lib/gameData.js';
 import runGame from '../index.js';
 import getRandomNum from '../lib/getRandomNum.js';
 
@@ -24,7 +24,7 @@ const prepareGameData = () => {
       break;
     default:
       break;
-  } return getGameData(question, String(correctAnswer));
+  } return makeGameData(question, String(correctAnswer));
 };
 
 const startGame = () => runGame(gameTask, prepareGameData);
